@@ -46,3 +46,17 @@
   background: skyblue;
   margin: auto;
 }
+.navigate{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 30px;
+}
+.details{
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}

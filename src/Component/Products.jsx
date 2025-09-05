@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { IoInformationCircle } from "react-icons/io5";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Link } from 'react-router';
 
 
 const Products = ({usePromise}) => {
@@ -76,8 +77,15 @@ const Products = ({usePromise}) => {
                             <h4>From : {product.place}</h4>
                             <h5>Price : {product.price}</h5>
                             <div className='btn-d'>
-                            <button className='btn'><IoInformationCircle /></button>
-                            <button className='btn'><FaRegEdit /></button>
+                            {/* <button className='btn'>
+                                <Link to={`/details/${product._id}`}><IoInformationCircle /></Link>
+                            </button> */}
+                            <Link to={`/details/${product._id}`}>
+                                <button className='btn'> <IoInformationCircle /></button>
+                            </Link>
+                            <Link  className='btn' to={`/update/${product._id}`}>
+                                <button  className='btn'><FaRegEdit /></button>
+                            </Link>
                             <button className='btn' onClick={()=>deleteProduct(product._id)}><MdDelete /></button>
                             </div>
                         </div>
